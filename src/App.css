@@ -1,0 +1,332 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/*-----------------estilização da header----------------------*/
+
+.body {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header {
+  width: 100%;
+  height: 139px;
+  margin-top: 0;
+  margin-left: 0;
+  position: absolute;
+  background-color: #f5f5f5;
+}
+
+.main {
+  width: 100%;
+}
+
+.logo {
+  width: 159px;
+  height: 37px;
+  margin-top: 15px;
+  margin-left: 27%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.logo_h1 {
+  font-size: 25px;
+  margin: 0;
+  color: #333333;
+}
+.logo_h2 {
+  font-size: 15px;
+  margin-left: 0;
+  margin-top: 11px;
+  color: #eb5757;
+}
+
+.input_box {
+  width: 87%;
+  height: 60px;
+  margin-top: 13px;
+  margin-left: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding-left: 10px;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  font-style: normal;
+  color: #e0e0e0;
+}
+
+.input {
+  width: 57%;
+  height: 97%;
+  background-color: #ffffff;
+  border: none;
+  padding-left: 5px;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  font-style: normal;
+  color: #e0e0e0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.inputButton {
+  width: 107px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #27ae60;
+  border: 2px solid #27ae60;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500, medium;
+  font-style: normal;
+}
+
+/*-----------------estilização da main - card box----------------------*/
+
+.body {
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards_box {
+  width: 313px;
+
+  margin-top: 152px;
+  margin-left: 9px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.cards_box_components {
+  display: flex;
+  flex-direction: row;
+}
+
+.carrinho_box {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 240px;
+  margin-top: 20px;
+  margin-left: 9px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  align-items: center;
+}
+
+.carrinho_box_titulo {
+  width: 100%;
+  height: 65px;
+
+  margin-top: -16px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #27ae60;
+}
+.carrinho_box_titulo_paragrafo {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 21px;
+  color: #ffffff;
+}
+
+.carrinho_box_txt_vazio {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 56px;
+
+  color: #333333;
+}
+
+.carrinho_box_add_itens {
+}
+
+/*-------------------------Estilização modo tablet--------------*/
+
+@media (min-width: 450px) {
+  /*-----------------estilização da header----------------------*/
+
+  .header {
+    width: 100%;
+    height: 139px;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    background-color: #f5f5f5;
+  }
+
+  .logo {
+    width: 159px;
+    height: 37px;
+    margin-top: 15px;
+    margin-left: 36%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .logo_h1 {
+    font-size: 25px;
+    margin: 0;
+    color: #333333;
+  }
+  .logo_h2 {
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 11px;
+    color: #eb5757;
+  }
+
+  .input_box {
+    width: 92%;
+    height: 60px;
+    margin-top: 13px;
+    margin-left: 16px;
+  }
+
+  .input {
+    width: 72%;
+    height: 97%;
+  }
+}
+
+/*-----------------estilização da main - card box----------------------*/
+
+.cards_box_components {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.cards_box {
+  width: 313px;
+  height: 1122px;
+  margin-top: 152px;
+  margin-left: 60px;
+  flex-wrap: wrap;
+}
+
+/*-------------------------Estilização modo desktop--------------*/
+
+@media (min-width: 1023px) {
+  /*-----------------estilização da header----------------------*/
+
+  .header {
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 159px;
+    height: 37px;
+    margin-top: 19px;
+    margin-left: 109px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .logo_h1 {
+    font-size: 25px;
+    margin: 0;
+    color: #333333;
+  }
+  .logo_h2 {
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 11px;
+    color: #eb5757;
+  }
+
+  .input_box {
+    width: 365px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 50%;
+  }
+
+  .input {
+    width: 66%;
+    height: 97%;
+  }
+
+  /*-----------------estilização da main - card box----------------------*/
+
+  .body {
+    display: flex;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cards_box {
+    width: 964px;
+    height: 720px;
+    margin-top: 111px;
+    margin-left: 67px;
+    border: 1px solid black;
+  }
+
+  .carrinho_box {
+    width: 365px;
+    height: 240px;
+    margin-top: 111px;
+    margin-left: 36px;
+    border: 1px solid black;
+  }
+
+  .carrinho_box_titulo {
+    width: 365px;
+    height: 65px;
+    margin-top: -16px;
+    background-color: #27ae60;
+  }
+  .carrinho_box_titulo_paragrafo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 22px;
+    padding-left: 20px;
+    color: #ffffff;
+  }
+}
