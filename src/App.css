@@ -122,7 +122,7 @@ main {
 .cards_box {
   width: 300px;
   margin-top: 152px;
-  margin-left: 12px;
+  margin-left: 2px;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
@@ -238,7 +238,7 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: inherit;
     width: 90%;
     height: 100%;
     margin: auto;
