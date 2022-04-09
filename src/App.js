@@ -2,6 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import Product from "./components/Product";
 import MenuContainer from "./components/MenuContainer";
+import CartContainer from "./components/CartContainer";
+import CartProduct from "./components/CartProduct";
+import DivSacola from "./components/DivSacola";
 
 function App() {
   const [products, setProducts] = useState([
@@ -50,8 +53,9 @@ function App() {
   ]);
 
   const [filteredProducts, setFilteredProducts] = useState([]);
-  /*const [currentSale, setCurrentSale] = useState([])
-  const [cartTotal, setCartTotal] = useState(0)*/
+  const [currentSale, setCurrentSale] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
+
   const [userInput, setUserInput] = useState(" ");
   //console.log(userInput);
   function showProducts(item) {
@@ -64,22 +68,16 @@ function App() {
         }
       })
     );
-    // const products = filteredProducts;
   }
 
-  function handleClick(item) {
-    console.log(
-      products.map((item, index) => (
-        <product
-          key={index}
-          name={item.name}
-          category={item.category}
-          price={item.price}
-        />
-      ))
-    );
+  function handleClick(id) {
+    const getProduct = products.find((item) => {
+      return item.id === id;
+    });
+    setCurrentSale([...currentSale, getProduct]);
   }
 
+  console.log(currentSale);
   return (
     <div className="body">
       <header className="header">
@@ -117,9 +115,18 @@ function App() {
           <div className="carrinho_box_titulo">
             <p className="carrinho_box_titulo_paragrafo">Carrinho de compras</p>
           </div>
+          <div>
+            <CartContainer
+              className="carrinho_box_components"
+              products={currentSale}
+            />
+          </div>
 
-          <h3 className="carrinho_box_txt_vazio">Sua sacola está vazia</h3>
-          <p className="carrinho_box_add_itens">Adicione itens</p>
+          <div className="carrinho_box_total">
+            {currentSale.reduce((total, atual) => {
+              return atual.price + total;
+            }, 0)}
+          </div>
         </div>
       </main>
     </div>
