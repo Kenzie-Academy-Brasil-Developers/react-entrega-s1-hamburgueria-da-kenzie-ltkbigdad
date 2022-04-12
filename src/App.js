@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import Product from "./components/Product";
+import Header from "./components/Header";
 import MenuContainer from "./components/MenuContainer";
 import CartContainer from "./components/CartContainer";
 import CartProduct from "./components/CartProduct";
-import DivSacola from "./components/DivSacola";
 
 function App() {
   const [products, setProducts] = useState([
@@ -77,32 +77,13 @@ function App() {
     setCurrentSale([...currentSale, getProduct]);
   }
 
-  console.log(currentSale);
   return (
     <div className="body">
-      <header className="header">
-        <div className="logo">
-          <h1 className="logo_h1">Burguer</h1>
-          <h2 className="logo_h2">Kenzie</h2>
-        </div>
-        <div className="input_box">
-          <input
-            type="text"
-            className="input"
-            placeholder="Digitar Pesquisa"
-            /*value={userInput}*/
-            onChange={(event) => setUserInput(event.target.value)}
-          />
-          <button
-            className="inputButton"
-            onClick={() => {
-              showProducts(userInput);
-            }}
-          >
-            Pesquisar
-          </button>
-        </div>
-      </header>
+      <Header
+        setUserInput={setUserInput}
+        showProducts={showProducts}
+        userInput={userInput}
+      />
       <main>
         <div className="cards_box">
           <MenuContainer
@@ -111,22 +92,16 @@ function App() {
             handleClick={handleClick}
           />
         </div>
-        <div className="carrinho_box">
-          <div className="carrinho_box_titulo">
-            <p className="carrinho_box_titulo_paragrafo">Carrinho de compras</p>
-          </div>
-          <div>
-            <CartContainer
-              className="carrinho_box_components"
-              products={currentSale}
-            />
+        <div className="cart_box">
+          <div className="cart_box_title">
+            <p className="cart_box_title_paragraph">Carrinho de compras</p>
           </div>
 
-          <div className="carrinho_box_total">
-            {currentSale.reduce((total, atual) => {
-              return atual.price + total;
-            }, 0)}
-          </div>
+          <CartContainer
+            className="cart_box_components"
+            currentSale={currentSale}
+            setCurrentSale={setCurrentSale}
+          />
         </div>
       </main>
     </div>

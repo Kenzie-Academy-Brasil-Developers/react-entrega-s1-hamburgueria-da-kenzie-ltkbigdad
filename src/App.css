@@ -23,89 +23,8 @@ body {
   background-color: #ffffff;
 }
 
-.header {
-  width: 100%;
-  height: 139px;
-  margin-top: 0;
-  margin-left: 0;
-  position: absolute;
-  background-color: #f5f5f5;
-}
-
 .main {
   width: 100%;
-}
-
-.logo {
-  width: 159px;
-  height: 37px;
-  margin-top: 15px;
-  margin-left: 27%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-
-.logo_h1 {
-  font-size: 25px;
-  margin: 0;
-  color: #333333;
-}
-.logo_h2 {
-  font-size: 15px;
-  margin-left: 0;
-  margin-top: 11px;
-  color: #eb5757;
-}
-
-.input_box {
-  width: 87%;
-  height: 60px;
-  margin-top: 13px;
-  margin-left: 16px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  border: 2px solid #e0e0e0;
-  padding-left: 10px;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  font-style: normal;
-  color: #e0e0e0;
-}
-
-.input {
-  width: 57%;
-  height: 97%;
-  background-color: #ffffff;
-  border: none;
-  padding-left: 5px;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  font-style: normal;
-  cursor: auto;
-}
-input::placeholder {
-  color: #e0e0e0;
-}
-
-input:focus {
-  outline: none;
-}
-
-.inputButton {
-  width: 107px;
-  height: 40px;
-  border-radius: 8px;
-  background-color: #27ae60;
-  border: 2px solid #27ae60;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500, medium;
-  font-style: normal;
 }
 
 /*-----------------estilização da main - card box----------------------*/
@@ -120,34 +39,29 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .cards_box {
-  width: 300px;
+  width: 94%;
   margin-top: 152px;
   margin-left: 2px;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
 
-.cards_box_components {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.carrinho_box {
+.cart_box {
   flex-direction: column;
   display: flex;
   justify-content: center;
-  width: 300px;
+  width: 94%;
   margin-top: 20px;
   border-radius: 5px;
   background-color: #f5f5f5;
   align-items: center;
 }
 
-.carrinho_box_titulo {
+.cart_box_title {
   width: 100%;
   height: 65px;
 
@@ -156,7 +70,7 @@ main {
   border-top-right-radius: 5px;
   background-color: #27ae60;
 }
-.carrinho_box_titulo_paragrafo {
+.cart_box_title_paragraph {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -164,78 +78,10 @@ main {
   color: #ffffff;
 }
 
-.carrinho_box_txt_vazio {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  padding-top: 56px;
-
-  color: #333333;
-}
-
-.carrinho_box_add_itens {
-}
-
 /*-------------------------Estilização modo tablet--------------*/
 
 @media (min-width: 768px) {
   /*-----------------estilização da header----------------------*/
-
-  .header {
-    width: 100%;
-    height: 139px;
-    margin-top: 0;
-    margin-left: 0;
-    position: absolute;
-    background-color: #f5f5f5;
-  }
-
-  .logo {
-    width: 159px;
-    height: 37px;
-    margin-top: 15px;
-    margin-left: 36%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-
-  .logo_h1 {
-    font-size: 35px;
-    margin: 0;
-    color: #333333;
-  }
-  .logo_h2 {
-    font-size: 20px;
-    margin-left: 8px;
-    margin-top: 16px;
-    color: #eb5757;
-  }
-
-  .input_box {
-    width: 92%;
-    height: 60px;
-    margin-top: 13px;
-    margin-left: 16px;
-  }
-
-  .input {
-    width: 81%;
-    height: 97%;
-    font-size: 21px;
-  }
-
-  .inputButton {
-    width: 73px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: #27ae60;
-    border: 2px solid #27ae60;
-    color: #ffffff;
-    font-size: 13px;
-    font-style: normal;
-  }
 
   /*-----------------estilização da main - card box----------------------*/
 
@@ -245,17 +91,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .cards_box_components {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: inherit;
-    width: 90%;
-    height: 100%;
-    margin: auto;
   }
 
   .cards_box {
@@ -268,7 +103,7 @@ main {
     align-items: center;
   }
 
-  .carrinho_box {
+  .cart_box {
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -286,51 +121,6 @@ main {
 @media (min-width: 1023px) {
   /*-----------------estilização da header----------------------*/
 
-  .header {
-    width: 100%;
-    height: 80px;
-    margin-top: 0;
-    margin-left: 0;
-    position: absolute;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .logo {
-    width: 159px;
-    height: 37px;
-    margin-top: 19px;
-    margin-left: 109px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-
-  .logo_h1 {
-    font-size: 25px;
-    margin: 0;
-    color: #333333;
-  }
-  .logo_h2 {
-    font-size: 15px;
-    margin-left: 0;
-    margin-top: 11px;
-    color: #eb5757;
-  }
-
-  .input_box {
-    width: 257px;
-    height: 60px;
-    margin-top: 10px;
-    margin-left: 46%;
-  }
-
-  .input {
-    width: 66%;
-    height: 97%;
-  }
-
   /*-----------------estilização da main - card box----------------------*/
 
   .body {
@@ -343,7 +133,7 @@ main {
   }
 
   .cards_box {
-    width: 964px;
+    width: 64%;
     height: 720px;
     margin-top: 111px;
     margin-left: 45px;
@@ -356,23 +146,23 @@ main {
     width: 100%;
   }
 
-  .carrinho_box {
-    width: 365px;
-    height: 240px;
+  .cart_box {
+    width: 26%;
+
     margin-top: 111px;
-    margin-right: 18px;
+    margin-left: 36px;
   }
 
-  .carrinho_box_titulo {
+  .cart_box_title {
     width: 100%;
     height: 65px;
     margin-top: -16px;
     background-color: #27ae60;
   }
-  .carrinho_box_titulo_paragrafo {
+  .cart_box_title_paragraph {
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     padding-top: 6px;
     padding-left: 20px;
@@ -381,43 +171,20 @@ main {
 }
 
 @media (min-width: 1439px) {
-  .input_box {
-    width: 362px;
-    height: 60px;
-    margin-top: 10px;
-    margin-left: 56%;
-  }
-
-  .logo {
-    width: 159px;
-    height: 37px;
-    margin-top: 19px;
-    margin-left: 58px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-
-  .input_box {
-    width: 365px;
-    height: 60px;
-    margin-top: 10px;
-    margin-left: 57%;
-  }
-
   .cards_box {
-    width: 964px;
+    width: 67%;
     height: 720px;
     margin-top: 111px;
     margin-left: 45px;
     overflow-y: auto;
   }
 
-  .carrinho_box {
+  .cart_box {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    width: 365px;
+    width: 25%;
+    margin-left: 1%;
     margin-top: 110px;
     border-radius: 5px;
     background-color: #f5f5f5;

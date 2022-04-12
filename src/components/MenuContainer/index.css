@@ -1,1 +1,29 @@
+.cards_box_components {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 
+@media (min-width: 768px) {
+  .cards_box_components {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: inherit;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1023px) {
+  .cards_box_components {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1439px) {
+}

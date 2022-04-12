@@ -8,7 +8,7 @@ function Product({ id, name, category, price, img, handleClick }) {
       </div>
       <h1 className="card_titulo">{name}</h1>
       <p className="card_categoria">{category}</p>
-      <h2 className="card_preco">R$ {price}.00</h2>
+      <h2 className="card_preco">R$ {price}</h2>
       <button
         className="card_btn"
         onClick={() => {

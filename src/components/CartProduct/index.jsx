@@ -1,23 +1,41 @@
-//import "./index.css";
+import "./index.css";
 
-function CartProduct({ id, name, category, price, img, handleClick }) {
+function CartProduct({
+  id,
+  name,
+  category,
+  img,
+  products,
+  currentSale,
+  setCurrentSale,
+}) {
+  //preciso terminar a função do btn remover do card
+
+  /*function removeItem(id) {
+    const remove = currentSale.find((item) => {
+      return item.id !== id;
+    });
+    return setCurrentSale(remove);
+  }*/
+
   return (
-    <div className="card">
-      <div className="card_boxImg">
-        <img className="card_boxImg_img" src={img} alt={name} />
+    <li className="cart_card">
+      <div className="cart_card_boxImg">
+        <img className="cart_card_boxImg_img" src={img} alt={name} />
       </div>
-      <h1 className="card_titulo">{name}</h1>
-      <p className="card_categoria">{category}</p>
-      <h2 className="card_preco">R$ {price}.00</h2>
+      <div className="cart_infos">
+        <h1 className="cart_card_title">{name}</h1>
+        <p className="cart_card_category">{category}</p>
+      </div>
       <button
-        className="card_btn"
-        onClick={() => {
-          handleClick(id);
-        }}
+        className="cart_card_btn"
+        /* onClick={() => {
+          removeItem();
+        }}*/
       >
-        Adicionar
+        Remover
       </button>
-    </div>
+    </li>
   );
 }
 
