@@ -8,6 +8,7 @@ function CartProduct({
   products,
   currentSale,
   setCurrentSale,
+  // removeItem,
 }) {
   //preciso terminar a função do btn remover do card
 
@@ -17,6 +18,8 @@ function CartProduct({
     });
     return setCurrentSale(remove);
   }*/
+  const limiteOfName = name.slice(0, 16);
+  console.log(limiteOfName.length);
 
   return (
     <li className="cart_card">
@@ -24,14 +27,14 @@ function CartProduct({
         <img className="cart_card_boxImg_img" src={img} alt={name} />
       </div>
       <div className="cart_infos">
-        <h1 className="cart_card_title">{name}</h1>
+        <h1 className="cart_card_title">{limiteOfName}</h1>
         <p className="cart_card_category">{category}</p>
       </div>
       <button
         className="cart_card_btn"
-        /* onClick={() => {
-          removeItem();
-        }}*/
+        onClick={() => {
+          setCurrentSale(currentSale.filter((elem) => elem.name !== name));
+        }}
       >
         Remover
       </button>

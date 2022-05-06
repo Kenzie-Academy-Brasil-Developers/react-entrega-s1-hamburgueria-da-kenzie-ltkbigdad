@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import CartProduct from "../CartProduct";
 import "./style.css";
 
-function CartContainer({ currentSale, setCurrentSale }) {
+function CartContainer({ currentSale, setCurrentSale /*removeItem*/ }) {
   const [soma, setSoma] = useState(0);
 
   function price(currentSale) {
@@ -17,15 +17,14 @@ function CartContainer({ currentSale, setCurrentSale }) {
   }, [currentSale]);
 
   function removeAll() {
-    const emptyCart = currentSale.splice();
-    return setCurrentSale(emptyCart);
+    setCurrentSale([]);
   }
-  console.log(currentSale);
+
   return (
     <div className="cart_box_components">
       {currentSale.length > 0 ? (
         <Fragment>
-          <ul>
+          <ul className="cart_box_card">
             {currentSale.map((item, index) => (
               <CartProduct
                 key={index}
@@ -35,17 +34,25 @@ function CartContainer({ currentSale, setCurrentSale }) {
                 img={item.img}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
+                // removeItem={removeItem}
               />
             ))}
           </ul>
-          <div className="cart_box_total">{"R$" + soma.toFixed(2)}</div>
-          <button
-            onClick={() => {
-              removeAll();
-            }}
-          >
-            Remover Todos
-          </button>
+          <div className="cart_box_total">
+            <h3 className="cart_box_total_txt">Total</h3>
+            {"R$" + soma.toFixed(2)}
+          </div>
+
+          <div className="cart_box_button">
+            <button
+              className="cart_box_button_btn"
+              onClick={() => {
+                removeAll();
+              }}
+            >
+              Remover Todos
+            </button>
+          </div>
         </Fragment>
       ) : (
         <div className="cart_empty">

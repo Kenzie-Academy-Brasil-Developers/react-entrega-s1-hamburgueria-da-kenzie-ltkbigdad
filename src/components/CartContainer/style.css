@@ -1,9 +1,10 @@
 .cart_box_txt_empty {
   font-style: normal;
+  margin-left: 20%;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding-top: 56px;
+  padding-top: 38px;
 
   color: #333333;
 }
@@ -12,9 +13,94 @@
   font-size: 14px;
   color: #828282;
   font-weight: 400;
-  margin-left: 42px;
+  margin-left: 32%;
 }
 
 .cart_box_components {
   width: 100%;
+  background-color: #f5f5f5;
+}
+
+.cart_box_total {
+  display: flex;
+  border-top: 2px solid #e0e0e0;
+  width: 91%;
+  margin-left: 4%;
+  font-size: 14px;
+  padding-top: 21px;
+  color: #828282;
+}
+
+.cart_box_total_txt {
+  width: 49px;
+  height: 24px;
+  margin: 0;
+  padding-left: 1px;
+  padding-right: 63%;
+  font-size: 14px;
+  color: #333333;
+}
+
+.cart_box_button_btn {
+  font-size: 16px;
+  font-style: 600;
+  color: #828282;
+  width: 91%;
+  height: 60px;
+  margin-left: 4%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 2px solid #e0e0e0;
+}
+
+.cart_box_card {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .cart_box_txt_empty {
+    font-style: normal;
+    margin-left: 29%;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 24px;
+    padding-top: 30px;
+    color: #333333;
+  }
+
+  .cart_box_add_itens {
+    font-size: 18px;
+    color: #828282;
+    font-weight: 400;
+    margin-left: 39%;
+  }
+}
+
+@media (min-width: 1023px) {
+  .cart_box_txt_empty {
+    width: 91%;
+    height: 40px;
+    font-style: normal;
+    text-align: center;
+    margin-left: 4%;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 30px;
+    color: #333333;
+  }
+
+  .cart_box_add_itens {
+    width: 91%;
+    height: 24px;
+
+    font-size: 18px;
+    color: #828282;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 4%;
+    margin-top: auto;
+  }
 }

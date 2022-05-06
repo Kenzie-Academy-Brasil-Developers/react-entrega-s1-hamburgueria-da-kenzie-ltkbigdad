@@ -54,10 +54,10 @@ function App() {
 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
+  const [cartFilter, setCartFilter] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-
   const [userInput, setUserInput] = useState(" ");
-  //console.log(userInput);
+
   function showProducts(item) {
     setFilteredProducts(
       products.filter((product) => {
@@ -70,13 +70,38 @@ function App() {
     );
   }
 
+  //a função de não deixar adicionar itens repetidos, ainda não está funcionando.
+  //ela está imbutada na função handleClick.
+
   function handleClick(id) {
-    const getProduct = products.find((item) => {
-      return item.id === id;
-    });
-    setCurrentSale([...currentSale, getProduct]);
+    const duplicate = currentSale.filter((elem) => elem.id === id);
+    if (cartFilter.length > currentSale.length) {
+      const cartFiltered = currentSale.filter((elem, index, arr) => {
+        return arr.indexOf(elem) === index;
+      });
+      setCartFilter([...currentSale, cartFiltered]);
+    } else {
+      const getProduct = products.find((item) => {
+        return item.id === id;
+      });
+      if (duplicate.length === 0) {
+        setCurrentSale([...currentSale, getProduct]);
+        setCartFilter(currentSale);
+      }
+    }
   }
 
+  /* function removeItem(name) {
+    const remove = currentSale.filter((elem) => elem.name !== name);
+
+    //console.log(remove);
+
+    setCurrentSale(remove);
+    // console.log(name);
+  }*/
+  /* console.log(cartFilter);
+  console.log(cartFilter);
+  console.log(currentSale);*/
   return (
     <div className="body">
       <Header
@@ -101,6 +126,7 @@ function App() {
             className="cart_box_components"
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
+            // removeItem={removeItem}
           />
         </div>
       </main>
